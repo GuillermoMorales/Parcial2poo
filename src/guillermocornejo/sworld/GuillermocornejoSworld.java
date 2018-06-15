@@ -12,6 +12,7 @@ import Dioses.Dios;
 import Dioses.MonteOlimpo;
 import Humanos.HeadQuarters;
 import java.util.Scanner;
+import Other.Menu;
 import Other.usuario;
 import java.util.ArrayList;
 /**
@@ -56,12 +57,14 @@ public class GuillermocornejoSworld {
         Scanner entrada = new Scanner(System.in);
         String num;
         boolean flag = false;
+        boolean demonios = false;
+        int cont=1;
         ///////////////////////////////////////////////////////////////////////
         System.out.println("--------------------BIENVENIDO AL JUEGO--------------------");
         System.out.println("Razas disponibles:\n"
                 + "1)Demonios\n"
-                + "2)Dioses\n"
-                + "3)Humanos\n");
+                + "2)Humanos\n"
+                + "3)Dioses\n");
         do
         {
             System.out.println("Jugador 1 seleccione su raza: ");
@@ -74,18 +77,22 @@ public class GuillermocornejoSworld {
                     case 1:
                         {
                             System.out.println("Has seleccionado la raza Demonios");
-                            usuario u1=new usuario( 1 , num, nc,alma,pecado,monjudas);
+                            System.out.println("");
+                            demonios = true;
+                            
                             break;
                         }
                     case 2:
                         {
                             System.out.println("Has seleccionado la raza Humanos");
+                            System.out.println("");
                             usuario u1 = new usuario(1 , num, hq,moro,mopla,moco);
                             break;
                         }
                     case 3:
                         {
                             System.out.println("Has seleccionado la raza Dioses");
+                            System.out.println("");
                             usuario u1 = new usuario(1 , num, mo,plan,moneda,mena);
                             break;
                         }
@@ -104,7 +111,10 @@ public class GuillermocornejoSworld {
                 + "3)Humanos\n");
             }
         }while(flag==false);
-        
+        if(demonios == true)
+        {
+            usuario u1=new usuario( 1 , num, nc,alma,pecado,monjudas);
+        }
         //////////////////////////////////////////////////////////////////////
         //Jugador 2
         do
@@ -119,18 +129,21 @@ public class GuillermocornejoSworld {
                     case 1:
                         {
                             System.out.println("Has seleccionado la raza Demonios");
+                            System.out.println("");
                             usuario u2=new usuario( 2 , num, nc2,alma2,pecado2,monjudas2);
                             break;
                         }
                     case 2:
                         {
                             System.out.println("Has seleccionado la raza Humanos");
+                            System.out.println("");
                             usuario u2 = new usuario(2 , num, hq2,moro2,mopla2,moco2);
                             break;
                         }
                     case 3:
                         {
                             System.out.println("Has seleccionado la raza Dioses");
+                            System.out.println("");
                             usuario u2 = new usuario( 2, num, mo2,plan2,moneda2,mena2);
                             break;
                         }
@@ -149,6 +162,6 @@ public class GuillermocornejoSworld {
                 + "3)Humanos\n");
             }
         }while(flag==false);
-         
+        
     }
 }

@@ -160,15 +160,5 @@ public class usuario {
     public void setMonedajudas(ArrayList<Demonio> monedajudas) {
         this.monedajudas = monedajudas;
     }
-    public int fase(int cont){
-        if(cont%2==0){
-            System.out.println("Es turno del jugador "+ ((cont%2)+2));
-        }
-        else{
-            System.out.println("Es turno del jugador "+ ((cont%2)));
-        }
-        
-        cont=cont+1;
-        return cont;
-    }
+    
 }
